@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear
+
+echo
+echo "Lista de Dispositivos de video"
+echo
+
+ls /dev/video*
+
+echo
+echo "¿Qué dispositivo de video deseas usar?"
+echo "/dev/"
+
+read dispositivoDeVideo
+
+ffplay -vf "hflip" -window_title webcam /dev/$dispositivoDeVideo
