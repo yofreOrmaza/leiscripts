@@ -2,5 +2,5 @@
 
 Created by Yofre (yfrvids)
 
-[dotrec](./scripts/dotrec/)
-[dotcam](./scripts/dotcam/)
+- [dotrec](./scripts/dotrec/)
+- [dotcam](./scripts/dotcam/)
