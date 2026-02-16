@@ -5,11 +5,11 @@ audiomic=alsa_input.pci-0000_00_1b.0.analog-stereo
 
 volsystem=-10
 
-read -p "Video size (1024x768, 1366x768): " videoSize
+read -p "-video_size (1366x768, 10124x768): " videoSize
 
-read -p "framerate (fps): " fps
+read -p "-framerate: " fps
 
-read -p "coordenadas (:0.0+X,Y) :0.0+" coordenadas
+read -p "Coordenadas de Monitor (-i :0.0+X,Y) -i :0.0+" coordenadas
 
 ffmpeg \
  -f pulse -i "$audiomic" \
