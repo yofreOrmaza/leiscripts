@@ -17,9 +17,9 @@ read -p "-framerate: " fps
 
 read -p "Coordenadas de Monitor (-i :0.0+X,Y) -i :0.0+" coordenadas
 
-read -p "Volumen Mic (5 = en dB): " volmic
+read -p "Volumen Mic (5=5dB): " volmic
 
-read -p "Volumen Audio Interno (-10 = en dB): " volsystem
+read -p "Volumen Audio Interno (-10=-10dB): " volsystem
 
 read -p "Nombre de archivo: " nombregrabacion
 
@@ -34,6 +34,6 @@ ffmpeg \
     [1:a]adelay=150|150,volume="$volsystem"dB[sistema]; \
     [mic][sistema]amix=inputs=2:duration=longest[audio_final]" \
  -map 2:v -map "[audio_final]" \
- -c:v libx264 -preset veryfast \
- -c:a aac -b:a 128k \
+ -c:v libx264 -preset veryfast -crf 18 \
+ -c:a aac -b:a 192k \
  "$nombregrabacionfinal.mkv"
