@@ -4,7 +4,7 @@ clear
 
 echo "dotREC ◉"
 echo "1) Grabar pantalla con Audio interno con Mic"
-echo "2) Grabar pantalla con Audio interno con Mic + controles avanzados de audio V2 (beta)"
+echo "2) Grabar pantalla con Audio interno con Mic + Controles Avanzados de Audio"
 echo "3) Grabar Webcam sin Audio interno sin Mic"
 echo "4) default"
 
