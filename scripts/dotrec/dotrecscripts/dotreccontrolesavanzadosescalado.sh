@@ -18,7 +18,7 @@ read -p "-video_size (1366x768, 1024x768): " videoSize
 
 read -p "-framerate: " fps
 
-read -p "Coordenadas de Monitor (-i :0.0+X,Y) -i $display.0+" coordenadas
+read -p "Coordenadas de Monitor (-i :0.0+X,Y) -i $display+" coordenadas
 
 read -p "Volumen Mic (5=5dB): " volmic
 
@@ -34,7 +34,7 @@ output_res="1920:1080"
 ffmpeg \
  -f pulse -i "$audiomic" \
  -f pulse -i "$audiosistema" \
- -f x11grab -video_size $videoSize -framerate $fps -i $display.0+$coordenadas \
+ -f x11grab -video_size $videoSize -framerate $fps -i $display+$coordenadas \
  -filter_complex \
    "[0:a]adelay=0|0,volume="$volmic"dB[mic]; \
     [1:a]adelay=150|150,volume="$volsystem"dB[sistema]; \
